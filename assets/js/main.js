@@ -197,14 +197,27 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
+    const sendingMessage = document.querySelector("#sending-message");
+    const errorMessage = document.querySelector("#error-message");
+    const successMessage = document.querySelector("#success-message");
+
+    sendingMessage.classList.add("show");
+    successMessage.classList.remove("show");
+    errorMessage.classList.remove("show");
+
     fetch("https://www.codersimp.com/mailer.php", {
       method: "post",
       body: formData,
     })
       .then(() => {
         alert("Message sent. Expect a response within 24 hours.");
+        successMessage.classList.add("show");
       })
       .catch((err) => {
         alert("Error: " + err.message);
-      });
+        errorMessage.classList.add("show");
+      })
+      .finally(() => sendingMessage.classList.remove("show"))
 })
+
+showSendingMessage
