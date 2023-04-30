@@ -12,6 +12,10 @@ if(!isset($name) || !isset($email) || !isset($message)){
     exit(1);
 }
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization, Origin');
+header('Access-Control-Allow-Methods:  POST, PUT, GET');
+
 $from = "chad@codersimp.com";
 $to = "98scrapyg@gmail.com,wh3nitsdark0ut@gmail.com,chad@codersimp.com";
 $subject = "New Message - coderSimp (from: " . $name . ")";
