@@ -18,7 +18,7 @@ header('Access-Control-Allow-Methods:  POST, PUT, GET');
 
 $from = "chad@codersimp.com";
 $to = "98scrapyg@gmail.com,wh3nitsdark0ut@gmail.com,chad@codersimp.com";
-$subject = "New Message - coderSimp (from: " . $name . ")";
+$subject = "Message from " . $name . " (coderSimp)";
 $body = $message . "\n\n" . "Email: " . $email;
 $headers = "From:" . $from;
 if(mail($to, $subject, $body, $headers)) {
