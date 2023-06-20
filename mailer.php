@@ -17,7 +17,7 @@ header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization
 header('Access-Control-Allow-Methods:  POST, PUT, GET');
 
 $from = "chad@codersimp.com";
-$to = "98scrapyg@gmail.com,wh3nitsdark0ut@gmail.com,chad@codersimp.com";
+$to = "wh3nitsdark0ut@gmail.com,chad@codersimp.com";
 $subject = "Message from " . $name . " (coderSimp)";
 $body = $message . "\n\n" . "Email: " . $email;
 $headers = "From:" . $from;
